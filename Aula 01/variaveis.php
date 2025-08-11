@@ -41,13 +41,7 @@
 
     $frase3="O PHP foi criado em mil novecentos e noventa e cinco";
 
-    $frase3=str_replace("o","0",$frase3);
-
-    $frase3=str_replace("O","0",$frase3);
-
-    $frase3=str_replace("a","4",$frase3);
-
-    $frase3=str_replace("i","1",$frase3);
+    $frase3 = str_replace(["o", "O", "a", "i"], ["0", "0", "4", "1"], $frase3);
 
     echo"$frase3";
 
