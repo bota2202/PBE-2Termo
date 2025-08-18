@@ -170,32 +170,32 @@
     // }
 
 
-    //Exercício extra
+    // //Exercício extra
 
-    $n1 = readline("Digite algo: ");
-    $n2 = readline("Digite outro valor: ");
+    // $n1 = readline("Digite algo: ");
+    // $n2 = readline("Digite outro valor: ");
 
-    function tipo($valor) {
-        if (filter_var($valor, FILTER_VALIDATE_INT) !== false) {
-            return "integer";
-        } elseif (filter_var($valor, FILTER_VALIDATE_FLOAT) !== false) {
-            return "double"; // mesmo nome que gettype usa para float
-        } elseif (is_numeric($valor)) {
-            return "numeric string"; // número passado como string
-        } elseif (strtolower($valor) === "true" || strtolower($valor) === "false") {
-            return "boolean";
-        } else {
-            return "string";
-        }
-    }
+    // function tipo($valor) {
+    //     if (filter_var($valor, FILTER_VALIDATE_INT) !== false) {
+    //         return "integer";
+    //     } elseif (filter_var($valor, FILTER_VALIDATE_FLOAT) !== false) {
+    //         return "double"; 
+    //     } elseif (is_numeric($valor)) {
+    //         return "numeric string";
+    //     } elseif (strtolower($valor) === "true" || strtolower($valor) === "false") {
+    //         return "boolean";
+    //     } else {
+    //         return "string";
+    //     }
+    // }
 
-    $t1 = tipo($n1);
-    $t2 = tipo($n2);
+    // $t1 = tipo($n1);            
+    // $t2 = tipo($n2);
 
-    if ($t1 === $t2) {
-        echo "$n1 é $t1 e $n2 é $t2, logo são do mesmo tipo\n";
-    } else {
-        echo "$n1 é $t1 e $n2 é $t2, logo não são do mesmo tipo\n";
-    }
+    // if ($t1 === $t2) {
+    //     echo "$n1 é $t1 e $n2 é $t2, logo são do mesmo tipo\n";
+    // } else {
+    //     echo "$n1 é $t1 e $n2 é $t2, logo não são do mesmo tipo\n";
+    // }
 
 ?>
