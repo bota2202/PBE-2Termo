@@ -66,16 +66,15 @@
 
     //Revisão 4
 
-function calcularpreco($marca, $ano, $donos) {
-    // Preço base por marca
+function calcularpreco($marca, $ano, $donos) {  
     if ($marca == "Honda") {
         $preco = 150000;
     } else if ($marca == "BMW") {
         $preco = 300000;
     } else if ($marca == "Fiat") {
-        $preco = 20000;
-    } else {
-        $preco = 100000;
+        $preco = 300000;
+    } else {     
+        $preco = 70000;
     }
 
     $porcentagem = ($donos - 1) * 0.05; 
@@ -92,13 +91,6 @@ function calcularpreco($marca, $ano, $donos) {
     return "O preço estimado do $marca $ano é R$ " . number_format($preco, 2, ',', '.') . "\n";
 }
 
-// Exemplo de uso
 echo calcularpreco("Honda", 2016, 2);
-echo calcularpreco("BMW", 2012, 3);
-echo calcularpreco("Fiat", 2005, 1);
-echo calcularpreco("Volkswagen", 2020, 7);
 
-?>
-
-
-?>
+?>      
