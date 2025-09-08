@@ -57,7 +57,7 @@
 
    $pessoa1=new Pessoa('OtáVio SAtuRnInO DA siLvA','490.929.088-51','(19)99949-5895','-16','otaviosaturnino22@gmail.com','1234');
 
-   echo $pessoa1->getnome() "\n";
+   echo $pessoa1->getnome() ."\n";
 
    echo $pessoa1->exibirinfo();
 
