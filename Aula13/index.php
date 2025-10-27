@@ -32,4 +32,36 @@
         echo "(".$aluno->getId().") - ".$aluno->getNome()." - ".$aluno->getCurso()."\n";
     }
 
+    $dao->criarAlunos(new Aluno(4,'Aurora','Arquitetura'));
+    $dao->criarAlunos(new Aluno(5,'Oliver','Gestão'));
+    $dao->criarAlunos(new Aluno(6,'Amanda','Luta'));
+    $dao->criarAlunos(new Aluno(7,'Geysa','Engenharia'));
+    $dao->criarAlunos(new Aluno(8,'Joab','Elétrica'));
+    $dao->criarAlunos(new Aluno(9,'Miguel','Streamer'));
+
+    echo "\nApós atualização:\n";
+    foreach($dao->lerAlunos() as $aluno){
+        echo "(".$aluno->getId().") - ".$aluno->getNome()." - ".$aluno->getCurso()."\n";
+    }
+
+    $dao->atualizarAlunos(7, "Clotilde", "Engenharia");
+    $dao->atualizarAlunos(8, "Joana", "Elétrica");
+    $dao->atualizarAlunos(9, "Miguel", "Designer");
+    $dao->atualizarAlunos(6, "Amanda", "Logística");
+    $dao->atualizarAlunos(5, "Oliver", "Elétrica");
+
+    echo "\nApós atualização:\n";
+    foreach($dao->lerAlunos() as $aluno){
+        echo "(".$aluno->getId().") - ".$aluno->getNome()." - ".$aluno->getCurso()."\n";
+    }
+
+    $dao->excluirAlunos(4);
+    $dao->excluirAlunos(7);
+
+    echo "\nApós exclusão:\n";
+    foreach($dao->lerAlunos() as $aluno){
+        echo "(".$aluno->getId().") - ".$aluno->getNome()." - ".$aluno->getCurso()."\n";
+    }
+
 ?>
+        
