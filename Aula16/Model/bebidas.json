@@ -1,0 +1,16 @@
+{
+    "teste": {
+        "nome": "teste",
+        "categoria": "Vinho",
+        "volume": "1L",
+        "valor": "500",
+        "qtde": "5"
+    },
+    "teste2": {
+        "nome": "teste2",
+        "categoria": "Cerveja",
+        "volume": "300ml",
+        "valor": "444",
+        "qtde": "1111"
+    }
+}
