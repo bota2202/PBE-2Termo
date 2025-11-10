@@ -17,22 +17,18 @@ class BebidaController {
 
     // Cadastra nova bebida
     public function criar($nome, $categoria, $volume, $valor, $qtde) {
-
-        // // Gera ID automaticamente com base no timestamp (exemplo simples)
-        // $id = time(); // Função caso o objeto tenha um atributo de ID
-
-        $bebida = new Bebida( $nome, $categoria, $volume, $valor, $qtde);
+        $bebida = new Bebida($nome, $categoria, $volume, $valor, $qtde);
         $this->dao->criarBebida($bebida);
     }
 
-    // Atualiza bebida existente
-    public function atualizar( $nome, $valor, $qtde) {
-        $this->dao->atualizarBebida( $nome, $valor, $qtde);
+    // Atualiza bebida existente - agora com TODOS os parâmetros
+    public function atualizar($nomeOriginal, $novoNome, $novaCategoria, $novoVolume, $novoValor, $novaQtde) {
+        return $this->dao->atualizarBebida($nomeOriginal, $novoNome, $novaCategoria, $novoVolume, $novoValor, $novaQtde);
     }
 
     // Exclui bebida
     public function deletar($nome) {
-        $this->dao->excluirBebida($nome);
+        return $this->dao->excluirBebida($nome);
     }
 }
 ?>
