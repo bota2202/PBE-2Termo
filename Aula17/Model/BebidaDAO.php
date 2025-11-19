@@ -8,7 +8,6 @@ class BebidaDAO {
     public function __construct() {
         $this->conn = Connection::getInstance();
 
-        // Cria a tabela se não existir
         $this->conn->exec("
             CREATE TABLE IF NOT EXISTS bebidas (
                 id INT AUTO_INCREMENT PRIMARY KEY,
@@ -22,7 +21,6 @@ class BebidaDAO {
     }
     
 
-    // CREATE
     public function criarBebida(Bebida $bebida) {
         $stmt = $this->conn->prepare("
             INSERT INTO bebidas (nome, categoria, volume, valor, qtde)
