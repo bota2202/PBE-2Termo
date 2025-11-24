@@ -11,7 +11,7 @@ class Connection
                 $host = "localhost";
                 $db = "livraria";
                 $user = "root";
-                $pass = "@Plast..2024";
+                $pass = "1234";
 
                 self::$instance = new PDO(
                     "mysql:host=$host;charset=utf8",
